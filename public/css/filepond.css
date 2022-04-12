@@ -1,0 +1,15 @@
+.filepond{
+  border: 2px dotted;
+  border-radius: 1em;
+  overflow: hidden;
+  width: 10em;
+}
+.filepond--panel-root{
+  padding: 1em;
+  background-color: white;
+}
+
+.filepond--drop-label{
+  font-family: 'Times New Roman', Times, serif;
+  color: #333;
+}

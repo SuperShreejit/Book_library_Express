@@ -1,0 +1,26 @@
+.btn{
+  border: 2px solid beige;
+  border-radius: 1em;
+  color: beige;
+  padding: .75em 1.5em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus{
+  outline: 4px solid #666;
+}
+
+.primary-btn{
+  background-color: slategray;
+}
+
+.danger-btn{
+  background-color: red;
+}
+.delete-btn{
+  background-color: red;
+  height: 100%;
+  width: 100%;
+}

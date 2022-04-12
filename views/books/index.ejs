@@ -1,0 +1,52 @@
+<h1 class="form-title">Search Book</h1>
+<form action="/books" method="get" class="form">
+	<div class="input-group">
+		<label for="title" class="label">Title</label>
+		<input
+			type="text"
+			class="input"
+			name="title"
+			id="title"
+			placeholder="Enter Book title"
+			value="<%= searchOptions.title %>"
+		/>
+	</div>
+	<div class="input-group">
+		<label for="publishAfter" class="label">Published After</label>
+		<input
+			type="date"
+			class="input"
+			name="publishAfter"
+			id="publishAfter"
+			value="<%= searchOptions.publishAfter %>"
+		/>
+	</div>
+	<div class="input-group">
+		<label for="publishBefore" class="label">Published Before</label>
+		<input
+			type="date"
+			class="input"
+			name="publishBefore"
+			id="publishBefore"
+			value="<%= searchOptions.publishBefore %>"
+		/>
+	</div>
+	<div class="input-group">
+		<button type="submit" class="btn primary-btn">Search</button>
+		<button type="reset" class="btn danger-btn">Reset</button>
+	</div>
+</form>
+<output class="output-error">
+	<%- include('../partials/errorMsg.ejs') %>
+</output>
+<h1 class="list-title">Books List</h1>
+<div class="results-list-books">
+	<% books.forEach( book => { %>
+	<div class="result-books">
+		<span class="result-name"><%= book.title %></span>
+		<a href="/books/<%= book.id %>">
+		<img class="result-img" src="<%= book.coverImagePath %>" />
+		</a>
+	</div>
+	<% }) %>
+</div>

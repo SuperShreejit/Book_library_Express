@@ -1,0 +1,14 @@
+.footer{
+  width: 100vw;
+  position: relative;
+  bottom: 0;
+  background-color: tomato;
+  transform: translateY(var(--header-height));
+  z-index: 1;
+  padding: 1em 2em;
+}
+
+.footer-text{
+  font-size: large;
+  color: beige;
+}

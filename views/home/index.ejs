@@ -1,0 +1,11 @@
+<h1 class="list-title">Recently added books</h1>
+<div class="results-list">
+  <% books.forEach( book => { %>
+  <div class="result">
+    <span class="result-name"><%= book.title %></span>
+    <a href="/books/<%= book.id %>">
+      <img class="result-img" src="<%= book.coverImagePath %> ">
+    </a>
+  </div>
+  <% }) %>  
+</div>

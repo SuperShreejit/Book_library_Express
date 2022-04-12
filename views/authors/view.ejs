@@ -1,0 +1,26 @@
+<h2 class="form-title">View Author</h2>
+<div class="results-list">
+	<div class="output-group">
+		<label for="name" class="label">Author name:</label>
+		<output id="name" class="output-name"><%= author.name %></output>
+	</div>
+	<div class="result-options">
+		<a href="/authors/<%= author.id %>/edit" class="btn primary-btn">Edit</a>
+		<%- include('../partials/deleteForm.ejs',{ url: `/authors/${author.id}` })
+		%>
+	</div>
+</div>
+<h2 class="form-title">Books Published</h2>
+<div class="results-list">
+	<div class="results-list-books">
+    
+		<% books.forEach( book => { %>
+		<div class="result-books">
+			<span class="result-name"><%= book.title %></span>
+			<a href="/books/<%= book.id %>">
+				<img class="result-img" src="<%= book.coverImagePath %>" />
+			</a>
+		</div>
+		<% }) %>
+	</div>
+</div>

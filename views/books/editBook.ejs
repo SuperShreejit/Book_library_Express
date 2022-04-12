@@ -1,0 +1,14 @@
+<h2 class="form-title">Edit Book</h2>
+<form
+	action="/books/<%= book.id %>/edit?_method=PATCH"
+	method="post"
+	class="create-form"
+	>
+	<!--use enctype="multipart/form-data" if used multer library but not required in filepond -->
+	<%- include('_form_fields.ejs') %>
+	<div class="result-options">
+		<button type="submit" class="btn primary-btn">Edit</button>
+		<a href="/books/<%= book.id %>" class="btn danger-btn">Cancel</a>
+	</div>
+</form>
+<output class="output"> <%- include('../partials/errorMsg.ejs') %> </output>

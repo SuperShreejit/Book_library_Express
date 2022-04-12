@@ -1,0 +1,72 @@
+.form-title{
+  color: coral;
+}
+
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.create-form{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1em;
+}
+
+.input-group{
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  align-items: center;
+}
+.output-group{
+  display: flex;
+  gap: .5em;
+  align-items: center;
+}
+.select{
+  padding: .25em .5em;
+  color: #333;
+  border: 2px solid;
+  border-radius: 1em;
+  outline: none;
+  font-size: medium;
+  text-transform: capitalize;
+}
+
+.label{
+  color: #555;
+  font-size: 1.5rem;
+}
+
+.input{
+  padding: .25em .5em;
+  color: #333;
+  border: 2px solid;
+  border-radius: 1em;
+  outline: none;
+  font-size: medium;
+}
+
+.output-error{
+  color: red;
+  font-size: large;
+  min-height: 2em;
+}
+
+.output-name{
+  color: darkolivegreen;
+  font-size: 1.5rem;
+  padding: .5em 1em;
+  background-color: #ddd;
+  text-transform: capitalize;
+  border-radius: 1em;
+}
+.output-text{
+  color: #333;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  max-width: 40ch;
+}

@@ -1,0 +1,43 @@
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: tomato;
+  width: 100vw;
+  padding: 1em;
+  height: var(--header-height);
+  z-index: 1;
+}
+
+.nav-title{
+  text-decoration: none;
+  color: antiquewhite;
+  margin-bottom: 1em;
+}
+
+.nav{
+  margin-top: 2em;
+}
+
+.nav-menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+}
+
+.nav-menu-item{
+  margin: 0 .5em;
+}
+
+.nav-menu-link{
+  text-decoration: none;
+  color: antiquewhite;
+  padding: .75em 1.5em;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link:focus{
+  background-color: orangered;
+}

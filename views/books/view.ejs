@@ -1,0 +1,33 @@
+<h1 class="form-title">Book: <span class="result-name"><%= book.title %></span></h1>
+<div class="create-form">
+  <div class="input-group">
+    <label class="label">Cover:</label>
+    <img src="<%= book.coverImagePath %>" class="result-img">
+  </div>
+  <div class="input-group">
+    <div class="result-options-text">
+      <label for="author" class="label">Author:</label>
+      <output class="output-text"><%= book.author.name %></output>
+    </div>
+    <div class="result-options-text">
+      <label for="publishDate" class="label">Published Date:</label>
+      <output class="output-text"><%= (book.publishDate).toDateString().split('T')[0] %></output>
+    </div>
+    <div class="result-options-text">
+      <label for="pageCount" class="label">Page Count:</label>
+      <output class="output-text"><%= book.pageCount %></output>
+    </div>
+    <div class="result-options-text">
+      <label for="description" class="label">Description:</label>
+      <output class="output-text"><%= book.description %></output>
+    </div>
+  </div>
+  <div class="input-group">
+    <div class="result-options">
+      <a href="/books/<%= book.id %>/edit" class="btn primary-btn">Edit</a>
+      <%- include('../partials/deleteForm.ejs',{ url: `/books/${ book.id}` } ) %> 
+      <%- include('../partials/errorMsg.ejs') %> 
+    </div>
+    <a href="/authors/<%= book.author.id %>" class="btn primary-btn">View Author</a> 
+  </div>
+</div>

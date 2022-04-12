@@ -1,0 +1,7 @@
+<h2 class="form-title">Create New Author</h2>
+<form action="/authors/new" method="post" class="form">
+  <%- include('_form_fields') %>
+  <button type="submit" class="btn primary-btn">Create</button>
+  <button type="reset" class="btn danger-btn">Cancel</button>
+</form>
+<output class="output"><%- include('../partials/errorMsg.ejs') %></output>

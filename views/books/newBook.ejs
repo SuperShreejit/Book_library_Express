@@ -1,0 +1,14 @@
+<h2 class="form-title">Create New Book</h2>
+<form
+	action="/books/new"
+	method="post"
+	class="create-form"
+	>
+	<!--use enctype="multipart/form-data" if used multer library but not required in filepond -->
+	<%- include('_form_fields.ejs') %>
+	<div class="result-options">
+		<button type="submit" class="btn primary-btn">Create</button>
+		<button type="reset" class="btn danger-btn">Cancel</button>
+	</div>
+</form>
+<output class="output"> <%- include('../partials/errorMsg.ejs') %> </output>
